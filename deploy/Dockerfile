@@ -17,7 +17,7 @@ RUN mkdir -p /var/tmp/amgg/var/log
 
 RUN cd /var/tmp/amgg && npm install
 
-COPY run.sh /var/tmp/amgg
+COPY run.sh /var/tmp/amgg/
 RUN chmod +x /var/tmp/amgg/run.sh
 
 EXPOSE 3000
