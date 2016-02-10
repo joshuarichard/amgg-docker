@@ -22,8 +22,7 @@ RUN echo "jenkins:jenkins" | chpasswd
 
 RUN wget -O /var/tmp/swarm-client.jar http://maven.jenkins-ci.org/content/repositories/releases/org/jenkins-ci/plugins/swarm-client/2.0/swarm-client-2.0-jar-with-dependencies.jar
 
-ENV SLAVE_NAME_PREFIX "slave"
-ENV SLAVE_LABELS "node npm grunt"
+ENV LABELS "node npm grunt"
 
 COPY run.sh /var/tmp/
 RUN chmod +x /var/tmp/run.sh
